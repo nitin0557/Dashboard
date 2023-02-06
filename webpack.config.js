@@ -5,19 +5,18 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.join(__dirname, "public"),
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: '/'
   },
 
   module: {
     rules: [
       {
         loader: "babel-loader",
-        exclude: /node_modules/,
         test: /\.js$/,
       },
       {
         test: /\.less$/,
-        exclude: /node_modules/,
         use: ["style-loader", "css-loader", "less-loader"],
       },
       {
@@ -27,7 +26,9 @@ module.exports = {
       },
     ],
   },
-  
+  devServer: {
+    historyApiFallback: true,
+  },
   // plugins: [
   //   new HtmlWebpackPlugin({
   //     template: "/public/index.html",

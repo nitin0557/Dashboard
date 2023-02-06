@@ -10,7 +10,7 @@ const MainContainer = () => {
   return (
     <>
       <div className="home">
-        Dashboard
+        Reports
       </div>
 
       <Sidebar />
