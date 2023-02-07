@@ -30,7 +30,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build-static": "webpack --config webpack.static.config.js",
-    "build": "webpack",
+    "build": "webpack --config webpack.prod.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
